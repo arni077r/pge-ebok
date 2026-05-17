@@ -1,0 +1,6 @@
+{
+  "name": "PGE ebok",
+  "domains": ["sensor"],
+  "country": "PL",
+  "render_readme": true
+}
