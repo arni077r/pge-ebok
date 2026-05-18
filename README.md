@@ -1,5 +1,5 @@
 # pge-ebok
-Showing PGE energy bill
+Showing PGE energy bill. (Polska Grupa Energetyczna)
 
 ## Installation
 ### HACS (Recommended)
