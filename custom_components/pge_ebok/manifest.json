@@ -9,5 +9,5 @@
   "documentation": "https://github.com/arni077r/pge_ebok",
   "iot_class": "cloud_polling",
   "requirements": ["beautifulsoup4==4.12.3"],
-  "version": "1.0.0"
+  "version": "0.1.0"
 }
