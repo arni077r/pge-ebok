@@ -34,3 +34,17 @@ The sensor uses API from https://ebok.gkpge.pl
 and is particularly focused on the bill reading endpoint. 
 
 The data is refreshed every 24 hours or on the sensor startup.
+
+
+
+
+
+# Legal notice
+This is a personal project and isn't in any way affiliated with, sponsored or endorsed by PGE.
+All product names, trademarks and registered trademarks in (the images in) this repository, are property of their respective owners. All images in this repository are used by the project for identification purposes only.
+
+The data source for this integration is https://ebok.gkpge.pl/
+
+The author of this project categorically rejects any and all responsibility for the data that were presented by the integration.
+
+Anything else? Post a [question.](https://github.com/arni077r/pge-ebok/issues/new)
