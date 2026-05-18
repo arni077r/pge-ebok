@@ -1,9 +1,10 @@
 import logging
 import aiohttp
-from .const import DOMAIN, LOGIN_URL, INDEX_URL, FINANSE_URL
+from .const import DOMAIN, LOGIN_URL, INDEX_URL, FINANSE_URL, ZUZYCIE_URL
 
 from .parsers.index_parser import parse_index_page
 from .parsers.finanse_parser import parse_finanse_page
+from .parsers.zuzycie_parser import parse_zuzycie_page
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -80,7 +81,10 @@ class PGEEbokAPI:
             "termin_za_dni": None,
             "powiadomienia_liczba": 0,
             "w_sumie_finanse": None,
-            "dokumenty_liczba": None
+            "dokumenty_liczba": None,
+            "zuzycie_strefa_1": None,
+            "zuzycie_strefa_2": None,
+            "zuzycie_data_aktualizacji": "brak"
         }
 
         try:
@@ -97,7 +101,11 @@ class PGEEbokAPI:
                     html = await resp.text()
                     # Wywołanie zewnętrznego parsera dla strony finansów
                     data = parse_finanse_page(html, data)
-
+            # --- 3. STRONA ZUŻYCIE ---
+            async with self.session.get(ZUZYCIE_URL, headers=HEADERS) as resp:
+                if resp.status == 200:
+                    html = await resp.text()
+                    data = parse_zuzycie_page(html, data)
             return data
 
         except Exception as e:
