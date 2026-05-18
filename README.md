@@ -1,6 +1,16 @@
 # pge-ebok
 Showing PGE energy bill
 
+## Installation
+### HACS (Recommended)
+1. Install and configure [HACS](https://hacs.xyz/).
+2. Add this repository as a [custom repository](https://hacs.xyz/docs/faq/custom_repositories/) using:
+```
+[https://github.com/arni077r/pge-ebok/]
+```
+3. In HACS, search for **"PGE ebok"**, install the integration.
+4. Restart Home Assistant.
+
 
 ## Manual Configuration
 Sample configuration
